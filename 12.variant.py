@@ -191,17 +191,6 @@ def display_all_transactions():
     print("Список всех транзакций:")
     for transaction in transactions:
         print(f"Дата: {transaction[0]}, Время: {transaction[1]}, Направление: {transaction[2]}, Категория: {transaction[3]}, Сумма: {transaction[4]}, Контрагент: {transaction[5]}")
- 
-
-def proverka():
-    transactions = read_transactions() 
-    heap_sort_5(transactions) #Пирамидальная сортировка
-    transaction_0 = []
-
-    for transaction in transactions:
-        if transaction[2] == 'Приход':
-            transaction_0.append(transaction)
-    return transaction_0
 
 
 def compare_dates_5(date1, date2, amount1, amount2):
