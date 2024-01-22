@@ -14,6 +14,7 @@ def read_transactions(): #Функция чтения строк, разделе
         transactions.append(transaction)#Добавление всех частей, строк в отдельный список
     return transactions #Возвращает прочитанный, разделенный по частям список
 
+
 def write_transactions(transactions): #Функция чтения и записи транзакций в файл
     with open('transactions.txt', 'w', encoding='utf-8') as file:
         for transaction in transactions:
