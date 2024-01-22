@@ -74,7 +74,9 @@ def add_transaction():
             print("Контрагент не может быть пустым. Пожалуйста, введите Контрагента заново")
             break
 
+        transaction = {0: date, 1: time, 2: direction, 3: category, 4: float(amount), 5: counterparty}
         transactions = read_transactions()
+        transactions.append(transaction)
         write_transactions(transactions)
         print("Транзакция добавлена успешно.")
         break
